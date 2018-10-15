@@ -2,11 +2,11 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-game"
-    version="1.0.122">
+    version="1.0.123">
 	
     <name>Cordova Game plugin</name>
     <description>show leaderboard and achievements (google play game and game center, SDK)</description>
-    <author>Sang Ki Kwon (Cranberrygame) - Modify by Fred Oliveira</author>	
+    <author>Sang Ki Kwon (Cranberrygame) - Modify by Fred Oliveira and Elmer Nanches</author>	
     <license>MIT</license>
     <keywords>cordova,plugin,game,google play game,game center</keywords>
     <repo>https://github.com/guimaraf/cordova-plugin-game</repo>

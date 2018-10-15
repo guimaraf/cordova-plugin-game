@@ -1,10 +1,13 @@
 Cordova Game plugin
 ====================
+```c
+Modify Plugin with Fred Oliveira and Elmer Nanches for support Cordova Android 7.0.0
+```
 
 # Overview #
 Show leaderboard and achievements (google play game and game center, SDK)
  
-[android, ios] [cordova cli] [xdk] [phonegap build service]
+[android, ios] [cordova cli]
 
 Requires google play developer account https://play.google.com/apps/publish/<br>
 Requires apple developer account https://developer.apple.com/devcenter/ios/index.action
@@ -46,45 +49,27 @@ Achievement
 ```
 # Change log #
 ```c
-	1.0.109
-		Fixed crash issue when show leaderbord after logout.
-	1.0.112
-		Added show leaderboards method.
-	1.0.113
-		Fixed crash issue when submit score after logout.
+
+	1.0.123
+		Fixed support Android 7.0.0
 	1.0.115
 		Refixed crash issue when submit score after logout.
+	1.0.113
+		Fixed crash issue when submit score after logout.
+	1.0.112
+		Added show leaderboards method.
+	1.0.109
+		Fixed crash issue when show leaderbord after logout.
+	
 ```
 # Install plugin #
 
 ## Cordova cli ##
-https://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface - npm install -g cordova@6.0.0
 ```c
 //caution: replace 1064334934918 with your google play game app id
-cordova plugin add cordova-plugin-game --variable APP_ID="1064334934918"
-```
-## Xdk ##
-//caution: replace 1064334934918 with your google play game app id
-<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-game/master/doc/xdk_APP_ID.png"><br>
-https://github.com/cranberrygame/cordova-plugin-game/blob/master/doc/intelxdk.config.additions.xml
-```c
+cordova plugin add https://github.com/guimaraf/cordova-plugin-game --variable APP_ID="YOUR APP ID"
 ```
 
-## Cocoon ##
-https://cocoon.io - Create project - [specific project] - Setting - Plugins - Custom - Git Url: https://github.com/cranberrygame/cordova-plugin-game.git - INSTALL - Save<br>
-//caution: replace 1064334934918 with your google play game app id<br>
-https://cocoon.io - Create project - [specific project] - Setting - Plugins - Installed - Git Url https://github.com/cranberrygame/cordova-plugin-game.git - ADD PARAMETER - Name: APP_ID Value: 1064334934918 - Save<br>
-<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-game/master/doc/cocoon_APP_ID1.png"><br>
-<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-game/master/doc/cocoon_APP_ID2.png">
-
-## Phonegap build service (config.xml) ##
-https://build.phonegap.com/ - Apps - [specific project] - Update code - Zip file including config.xml
-```c
-//caution: replace 1064334934918 with your google play game app id
-<gap:plugin name="cordova-plugin-game" source="npm" >
-    <param name="APP_ID" value="1064334934918" />
-</gap:plugin>
-```
 
 ## Construct2 ##
 Download construct2 plugin: http://www.paywithapost.de/pay?id=4ef3f2be-26e8-4a04-b826-6680db13a8c8

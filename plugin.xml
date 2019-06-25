@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-game"
-    version="1.0.125">
+    version="1.0.127">
 	
     <name>Cordova Game plugin</name>
     <description>show leaderboard and achievements (google play game and game center, SDK)</description>
@@ -19,9 +19,18 @@
         <clobbers target="window.game" />
     </js-module>
 	
+	<dependency id="cordova-plugin-extras-google-play-services" url="https://github.com/guimaraf/cordova-plugin-extras-google-play-services" />
+	<dependency id="reinarte-gms" url="https://github.com/guimaraf/reinarte-gms" />
+	<dependency id="support-play-services-release" url="https://github.com/guimaraf/support-play-services-release" />
+
     <!-- android -->
     <platform name="android">
 		<preference name="APP_ID" />	
+
+		<!--config-file target="app/src/main/res/values/ids.xml" parent="/*"-->
+		<config-file target="app/src/main/res/values/strings.xml" parent="/resources">
+			<string name="app_id">$APP_ID</string>
+		</config-file>
 
 	    <config-file target="config.xml" parent="/*">
 			<feature name="Game" >
@@ -39,41 +48,14 @@
         </config-file>		
 	
 		<source-file src="src/android/ids.xml" target-dir="app/src/main/res/values" />
-		<config-file target="app/src/main/res/values/ids.xml" parent="/*">
-			<string name="app_id">$APP_ID</string>
-		</config-file>
-		
-		<!-- cranberrygame start: google-play-services.jar -->
-<!--		
-		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-			<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-		</config-file>
--->		
-		<!-- cranberrygame end -->
 		
 		<source-file src="src/android/GameHelper.java" target-dir="src/com/google/example/games/basegameutils"/>		
 		<source-file src="src/android/GameHelperUtils.java" target-dir="src/com/google/example/games/basegameutils"/>		
 		<source-file src="src/android/Game.java" target-dir="src/com/cranberrygame/cordova/plugin/game"/>
-		<!-- cranberrygame start: google-play-services.jar -->
-<!--		
-		<source-file src="src/android/google-play-services.jar" target-dir="libs" />
-		<source-file src="src/android/version.xml" target-dir="res/values" />
--->		
-		<!-- cranberrygame end -->		
-		
-<!--
-		<dependency id="com.google.playservices" url="https://github.com/MobileChromeApps/google-play-services" commit="00f511a8ce332d4586f067240460bfe978ace2ae" />
-		<dependency id="com.google.playservices@21.0.0" />		
 
-		<dependency id="android.support.v4@1.0.0" />
--->
-<!--		
-		<dependency id="cordova-plugin-extras-google-play-services" />		
-		<dependency id="cordova-plugin-extras-android-support-library-v4" />
--->		
-		<dependency id="cordova-plugin-extras-google-play-services" url="https://github.com/guimaraf/cordova-plugin-extras-google-play-services" />
+		<framework src="com.google.android.gms:play-services-games:+" />
+		<framework src="com.google.android.gms:play-services-plus:+" />
     </platform>
-	
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">

@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-game"
-    version="1.0.136">
+    version="1.0.137">
 	
     <name>Cordova Game plugin</name>
     <description>show leaderboard and achievements (google play game and game center, SDK)</description>
@@ -17,7 +17,7 @@
  		
     <js-module src="www/game.js" name="game">
         <clobbers target="window.game" />
-		
+
     </js-module>
 	
 	<dependency id="cordova-plugin-extras-google-play-services" url="https://github.com/guimaraf/cordova-plugin-extras-google-play-services" />
@@ -54,7 +54,7 @@
 		<source-file src="src/android/GameHelperUtils.java" target-dir="src/com/google/example/games/basegameutils"/>		
 		<source-file src="src/android/Game.java" target-dir="src/com/cranberrygame/cordova/plugin/game"/>
 
-		<framework src="com.google.android.gms:play-services-games:.16+" />
-		<framework src="com.google.android.gms:play-services-plus:.16+" />
+		<framework src="com.google.android.gms:play-services-games:16.+" />
+		<framework src="com.google.android.gms:play-services-plus:16.+" />
     </platform>
 </plugin>

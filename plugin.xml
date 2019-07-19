@@ -56,18 +56,4 @@
 		<framework src="com.google.android.gms:play-services-games:+" />
 		<framework src="com.google.android.gms:play-services-plus:+" />
     </platform>
-    <!-- ios -->
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-		    <feature name="Game">
-		        <param name="ios-package" value="Game" />
-		        <param name="onload" value="true" />
-		    </feature>
-        </config-file>
-               
-        <header-file src="src/ios/Game.h" compiler-flags="-fno-objc-arc" />
-        <source-file src="src/ios/Game.m" compiler-flags="-fno-objc-arc" />
-        
-        <framework src="GameKit.framework" />                	
-    </platform>	
 </plugin>

@@ -9,7 +9,9 @@ Modify Plugin with Fred Oliveira and Elmer Nanches for support Cordova Android 7
 Requires google play developer account https://play.google.com/apps/publish/<br>
 
 # Install Platform Android 8#
+```c
 cordova platform add android@8.0.0
+```
 
 # Install plugin #
 ```c

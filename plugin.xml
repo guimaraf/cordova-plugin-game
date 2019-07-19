@@ -6,7 +6,7 @@
 	
     <name>Cordova Game plugin</name>
     <description>show leaderboard and achievements (google play game and game center, SDK)</description>
-    <author>Sang Ki Kwon (Cranberrygame) - Modify by Fred Oliveira and Elmer Nanches</author>	
+    <author>Sang Ki Kwon (Cranberrygame) - Modify by Fred Oliveira and Elmer Nanches 2019</author>	
     <license>MIT</license>
     <keywords>cordova,plugin,game,google play game,game center</keywords>
     <repo>https://github.com/guimaraf/cordova-plugin-game</repo>

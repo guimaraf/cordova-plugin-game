@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-game"
-    version="1.0.127">
+    version="1.0.128">
 	
     <name>Cordova Game plugin</name>
     <description>show leaderboard and achievements (google play game and game center, SDK)</description>
@@ -21,7 +21,7 @@
 	
 	<dependency id="cordova-plugin-extras-google-play-services" url="https://github.com/guimaraf/cordova-plugin-extras-google-play-services" />
 	<dependency id="reinarte-gms" url="https://github.com/guimaraf/reinarte-gms" />
-	<dependency id="support-play-services-release" url="https://github.com/guimaraf/support-play-services-release" />
+	<!--dependency id="support-play-services-release" url="https://github.com/guimaraf/support-play-services-release" /-->
 
     <!-- android -->
     <platform name="android">
